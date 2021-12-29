@@ -15,10 +15,17 @@ body {
   background-color: var(--BG_MAIN);
 }
 #error-msg-sm-screen{
+  height: 100vh;
+  width: 100%;
   display: none;
-  text-align: center;
-  margin: 2.5rem auto;
+  justify-content: center;
+  align-items: center;
   color: coral;
+}
+#error-msg-sm-screen h1{
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
 }
 
 @media screen and (max-width: 600px) {
@@ -26,7 +33,7 @@ body {
     display: none;
   }
   #error-msg-sm-screen{
-    display: block;
+    display: flex;
   }
 }
 
