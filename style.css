@@ -14,6 +14,22 @@ body,
 body {
   background-color: var(--BG_MAIN);
 }
+#error-msg-sm-screen{
+  display: none;
+  text-align: center;
+  margin: 2.5rem auto;
+  color: coral;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    display: none;
+  }
+  #error-msg-sm-screen{
+    display: block;
+  }
+}
+
 
 .container {
   width: 90vw;
