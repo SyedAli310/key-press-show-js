@@ -1,5 +1,5 @@
 console.log("Js Connected!");
-
+const output = document.getElementById("output");
 let globalKeep = [];
 
 let alphabet = "abcdefghijklmnopqrstuvwxyz";
@@ -8,42 +8,36 @@ letterArray.push(" ");
 
 let x = null;
 const printArrayToScreen = (arr) => {
-  document.getElementById("output").style.visibility = "visible";
   if (typeof arr === "object") {
-    document.getElementById("output").innerHTML = arr.join("");
+    output.innerHTML = arr.join("");
   } else {
     if (arr === " ") {
-      document.getElementById(
-        "output"
-      ).innerHTML += `<span class='key-el'>Space</span>`;
-    } else
-      document.getElementById(
-        "output"
-      ).innerHTML += `<span class='key-el'>${arr}</span>`;
+      output.innerHTML += `<span class='key-el'>Space</span>`;
+    } else {
+      output.innerHTML += `<span class='key-el'>${arr}</span>`;
+    }
   }
   if (x) {
     clearTimeout(x);
   }
   x = setTimeout(() => {
-    document.getElementById("output").innerHTML = "";
-    document.getElementById("output").style.visibility = "hidden";
+    output.innerHTML = "";
   }, 2000);
 };
 
-document.onkeydown = function(e) {
-    return false;
+document.onkeydown = function (e) {
+  return false;
 };
 document.addEventListener("keydown", (e) => {
   //console.log(e.key);
   globalKeep.push(e.key);
   printArrayToScreen(e.key);
-  if (globalKeep.length > 15) {
-    document.getElementById("output").innerHTML = "";
+  if (globalKeep.length > 10) {
+    output.innerHTML = "";
     globalKeep = [];
     printArrayToScreen(e.key);
   }
 });
-
 
 // light-dark mode handlers
 
