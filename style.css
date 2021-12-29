@@ -1,0 +1,96 @@
+:root{
+    --BG_MAIN : #001b1b; 
+    --FG_MAIN : #1b1b1b;
+    --WHITE : #fff;
+    --BLACK : #000;
+}
+body,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+body {
+  background-color: var(--BG_MAIN);
+}
+
+.container {
+  width: 90vw;
+  margin: 0 auto;
+}
+.header{
+    width: 100%;
+    height: 50px;
+    padding: 1rem;
+    background-color: var(--FG_MAIN);
+    color: var(--WHITE);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0px 0px 5px 5px;
+}
+#color-mode-switch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: var(--BG_MAIN);
+    color: var(--WHITE);
+    font-size: 2rem;
+    border: none;
+    outline: 1.5px solid var(--WHITE);
+    cursor: pointer;
+}
+.output-cont {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#output {
+  max-width: 100%;
+  width: max-content;
+  height: auto;
+  margin-top: 1.5rem;
+  word-break: break-all;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* make a key like style */
+.key-el {
+  line-height: 80px;
+  font-size: 4rem;
+  text-align: center;
+  min-width: 80px;
+  width: auto;
+  padding: 0 0.5rem;
+  color: royalblue;
+  cursor: pointer;
+  margin: 0 8px;
+  height: 80px;
+  border-color: royalblue;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  background: -webkit-linear-gradient(
+    top,
+    #252525 0%,
+    #1f1d1d 80%,
+    #1a1818 100%
+  );
+  box-shadow: 0 0 1px #888, 0 1px 0 #000, 0 6px 0 #1a1919,
+    0 8px 17px rgba(34, 33, 33, 0.4), 2px 1px 4px rgba(32, 32, 32, 0.25),
+    -2px 1px 4px rgba(68, 68, 68, 0.25), 0 9px 16px rgba(68, 68, 68, 0.1);
+  transition: all 0.3s ease;
+}
